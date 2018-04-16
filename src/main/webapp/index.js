@@ -1,6 +1,6 @@
 // index.js
 
-var REST_DATA = 'api/favorites';
+var REST_DATA = 'api/videos';
 
 var KEY_ENTER = 13;
 var defaultItems = [
@@ -58,7 +58,7 @@ function loadItems(){
 
 function startProgressIndicator(row)
 {
-	row.innerHTML="<td class='content'>Uploading file... <img height=\"50\" width=\"50\" src=\"images/loading.gif\"></img></td>";
+	row.innerHTML="<td class='content'>Uploading video file... <img height=\"50\" width=\"50\" src=\"images/loading.gif\"></img></td>";
 }
 
 function removeProgressIndicator(row)
@@ -79,7 +79,13 @@ function uploadFile(node) {
 
 	//if file not selected, throw error
 	if (!file) {
-		alert("File not selected for upload... \t\t\t\t \n\n - Choose a file to upload. \n - Then click on Upload button.");
+		alert("Video file not selected for upload... \t\t\t\t \n\n - Choose a video file to upload. \n - Then click on Upload button.");
+		return;
+	}
+	
+	//if file is not a video file, throw error
+	if (!file.content_type.indexOf("video/") == 0) {
+		alert("Only video files are supported for upload... \t\t\t\t \n\n - Choose a video file to upload. \n - Then click on Upload button.");
 		return;
 	}
 
