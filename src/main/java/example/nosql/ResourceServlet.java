@@ -30,7 +30,7 @@ import com.google.gson.internal.LinkedTreeMap;
 
 @Path("/videos")
 /**
- * CRUD service of todo list table. It uses REST style.
+ * CRUD service of videos table. It uses REST style.
  */
 public class ResourceServlet {
 
