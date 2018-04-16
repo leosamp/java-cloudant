@@ -83,12 +83,6 @@ function uploadFile(node) {
 		return;
 	}
 	
-	//if file is not a video file, throw error
-	if (!file.content_type.indexOf("video/") == 0) {
-		alert("Only video files are supported for upload... \t\t\t\t \n\n - Choose a video file to upload. \n - Then click on Upload button.");
-		return;
-	}
-
 	var row = node.parentNode.parentNode.parentNode;
 
 	var form = new FormData();
