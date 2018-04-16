@@ -28,7 +28,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.internal.LinkedTreeMap;
 
-@Path("/favorites")
+@Path("/videos")
 /**
  * CRUD service of todo list table. It uses REST style.
  */
