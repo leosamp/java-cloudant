@@ -120,7 +120,7 @@ function sanitizeInput(str) {
 function setRowContent(item, row) {
 	var innerHTML = "<td class='contentName'><textarea id='nameText' class = 'nameText' onkeydown='onKey(event)'>" + sanitizeInput(item.name) + "</textarea></td><td class='contentDetails'>";
 
-	var valueTextArea = "<textarea id='valText' onkeydown='onKey(event)' placeholder=\"Enter a description...\"></textarea>";
+	var valueTextArea = "<textarea id='valText' onkeydown='onKey(event)' placeholder=\"Enter a category description...\"></textarea>";
 	if (item.value) {
 		valueTextArea = "<textarea id='valText' onkeydown='onKey(event)'>" + sanitizeInput(item.value) + "</textarea>";
 	}
@@ -172,7 +172,7 @@ function addItem(item, isNew) {
 		setRowContent(item, row);
 	} else //if new row
 	{
-		row.innerHTML = "<td class='contentName'><textarea id='nameText' onkeydown='onKey(event)' placeholder=\"Enter a title for your favourites...\"></textarea></td><td class='contentDetails'><textarea id='valText'  onkeydown='onKey(event)' placeholder=\"Enter a description...\"></textarea>" + attachButton + "</td>" +
+		row.innerHTML = "<td class='contentName'><textarea id='nameText' onkeydown='onKey(event)' placeholder=\"Enter a category title...\"></textarea></td><td class='contentDetails'><textarea id='valText'  onkeydown='onKey(event)' placeholder=\"Enter a description...\"></textarea>" + attachButton + "</td>" +
 			"<td class = 'contentAction'><span class='deleteBtn' onclick='deleteItem(this)' title='delete me'></span></td>";
 	}
 
