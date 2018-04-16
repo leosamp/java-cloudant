@@ -9,4 +9,4 @@ applications:
   memory: 256M
   path: target/JavaCloudantApp.war
   services:
-  - sample-java-cloudant-cloudantNoSQLDB
+  - agile-packt-db
