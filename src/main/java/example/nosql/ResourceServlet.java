@@ -120,10 +120,6 @@ public class ResourceServlet {
 				List<HashMap> allDocs = db.getAllDocsRequestBuilder().includeDocs(true).build().getResponse()
 						.getDocsAs(HashMap.class);
 
-				if (allDocs.size() == 0) {
-					allDocs = initializeSampleData(db);
-				}
-
 				for (HashMap doc : allDocs) {
 					HashMap<String, Object> obj = db.find(HashMap.class, doc.get("_id") + "");
 					JsonObject jsonObject = new JsonObject();
