@@ -264,42 +264,6 @@ public class ResourceServlet {
 		}
 	}
 
-	/*
-	 * Create a document and Initialize with sample data/attachments
-	 */
-	private List<HashMap> initializeSampleData(Database db) throws Exception {
-
-		long id = System.currentTimeMillis();
-		String name = "Sample category";
-		String value = "List of sample files";
-
-		// create a new document
-		System.out.println("Creating new document with id : " + id);
-		Map<String, Object> data = new HashMap<String, Object>();
-		data.put("name", name);
-		data.put("_id", id + "");
-		data.put("value", value);
-		data.put("creation_date", new Date().toString());
-		db.save(data);
-
-		// attach the object
-		HashMap<String, Object> obj = db.find(HashMap.class, id + "");
-
-		// attachment#1
-		File file = new File("Sample.txt");
-		file.createNewFile();
-		PrintWriter writer = new PrintWriter(file);
-		writer.write("This is a sample file...");
-		writer.flush();
-		writer.close();
-		FileInputStream fileInputStream = new FileInputStream(file);
-		db.saveAttachment(fileInputStream, file.getName(), "text/plain", id + "", (String) obj.get("_rev"));
-		fileInputStream.close();
-
-		return db.getAllDocsRequestBuilder().includeDocs(true).build().getResponse().getDocsAs(HashMap.class);
-
-	}
-
 	private Database getDB() {
 		return CloudantClientMgr.getDB();
 	}
