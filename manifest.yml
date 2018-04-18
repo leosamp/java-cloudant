@@ -1,12 +1,12 @@
 ---
 declared-services:
-  sample-java-cloudant-cloudantNoSQLDB:
+  agile-packt-db:
     label: cloudantNoSQLDB
     plan: Lite
 applications:
-- name: sample-java-cloudant
+- name: agile-packt
   random-route: true
   memory: 256M
-  path: target/JavaCloudantApp.war
+  path: target/AgilePacktApp.war
   services:
   - agile-packt-db
