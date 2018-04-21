@@ -7,6 +7,6 @@ applications:
 - name: agile-packt
   random-route: true
   memory: 256M
-  path: target/AgilePacktApp.war
+  path: target/JavaCloudantApp.war
   services:
   - agile-packt-db
