@@ -1,5 +1,3 @@
-package example.nosql;
-
 import java.util.Map.Entry;
 import java.util.Set;
 
