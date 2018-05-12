@@ -3,7 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 import com.cloudant.client.api.Database;
 
-public class TestCases {
+public class TestCases2 {
    
    private String MAVEN_HOME;
    private Database db = null;
