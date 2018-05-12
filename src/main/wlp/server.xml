@@ -10,6 +10,6 @@
         <tcpOptions soReuseAddr="true"/>
     </httpEndpoint>
 
-    <application name="JavaCloudantApp" context-root="/JavaCloudantApp" location="${appLocation}" type="war"/>
+    <application name="AgilePacktApp" context-root="/AgilePacktApp" location="${appLocation}" type="war"/>
 
 </server>
