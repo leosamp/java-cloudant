@@ -58,12 +58,14 @@ function loadItems(){
 
 function startProgressIndicator(row)
 {
+	document.getElementById('loadingImage').innerHTML = "Uploading video file... "+"<img height=\"100\" width=\"100\" src=\"images/loading.gif\"></img>";
 	row.innerHTML="<td class='content'>Uploading video file... <img height=\"50\" width=\"50\" src=\"images/loading.gif\"></img></td>";
 }
 
 function removeProgressIndicator(row)
 {
 	row.innerHTML="<td class='content'>uploaded...</td>";
+	document.getElementById('loadingImage').innerHTML = "";
 }
 
 function addNewRow(table)
