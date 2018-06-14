@@ -24,6 +24,13 @@ public class TestCases2 {
    }
    
    /*
+   
+   // ***** COURSE NOTE ******
+   // As you are learning in video 3.2 of the course, 
+   // you can UNcomment this method to see this test case failing as demonstrated in video 3.2
+   // You will learn in video 3.3 how to make this test pass, by providing user and password in
+   // the CloudantClientMgr.java class
+   
    @Test
    public void testDatabaseConnection(){
    	  Assert.assertNotNull("Database connection failed!",db);
